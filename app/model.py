@@ -38,7 +38,7 @@ class PhoneBook:
         self.update_data()
 
     def update_data(self):
-        with open(self.data_path, 'w') as f:
+        with open(self.data_path, 'w', encoding='utf8') as f:
             for number in self.contacts.keys():
                 name = self.contacts[number]
                 f.write(f'{name} {number}\n')
